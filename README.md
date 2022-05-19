@@ -1,5 +1,9 @@
 # DexNet
 
+
+
+# English
+
 > Detail environment setup will add later if it is needed.
 
 Owing that origin dex-net code is too old and some code is difficult to run, here provide a Docker and example code for DexNet.
@@ -30,7 +34,8 @@ feel free to contact me with elevenjiang8@gmail.com
 
 
 
-******
+
+# 中文
 
 由于原始DexNet的环境配置太过麻烦,为此使用了一个Docker进行配置
 
