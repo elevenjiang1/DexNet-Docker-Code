@@ -57,13 +57,59 @@ feel free to contact me with elevenjiang8@gmail.com
 
 > 需要一定的前置知识,如Docker的基本使用,文件挂载等
 
-1. 使用dexnet_docker中的两个脚本文件进行容器的创建和执行
+### 1.1 Docker创建与使用
 
-   **!!!需要对create_gl_container.sh中的路径进行修改!!!**
+1. 下载 [Docker](https://hub.docker.com/repository/docker/elevenjiang/dexnet) 链接内的内容,拉到本地
 
-2. 在dex-net/make_dataset_code中包含有一系列进行数据集制作的代码,基于本身tools中的代码进行实现,如果有数据制作的需要可以进行参考
+   ```
+   sudo docker pull elevenjiang/dexnet:Retest
+   ```
+
+2. 修改dexnet_docker中的两个脚本文件(在dexnet_docker文件夹中),进行新容器的创建
+
+   ```
+   #待修改内容
+   !!!/Change/to/Your/own/code!!!
+   !!!/home/Project/Code!!!
+   ```
+
+3. 进入docker环境
+
+   ```
+   sh exec_containser.sh
+   ```
 
 
+
+### 1.2 python环境安装
+
+需要将dexnet本身的python环境进行安装
+
+```
+cd /path/to/dex-net/deps
+#安装dexnet本身自带包
+cd SDFGen/
+sudo sh install.sh 
+cd ..
+cd Boost.NumPy/
+sudo sh install.sh 
+cd ..
+cd meshpy/
+python setup.py develop
+cd ..
+cd perception/
+python setup.py develop
+cd ..
+cd visualization/
+python setup.py develop
+cd ..
+cd gqcnn/
+python setup.py develop
+cd ..
+
+#进行文件创建测试
+python object_synthesis_code/example_create_database.py 
+```
 
 
 
